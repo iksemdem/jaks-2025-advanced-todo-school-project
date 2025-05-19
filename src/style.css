@@ -1,0 +1,110 @@
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.button {
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(86, 78, 230, 0.3);
+  color: white;
+  background: linear-gradient(90deg, #473fd3 0%, #773bdd 50%, #473fd3 100%);
+  border: none;
+  user-select: none;
+  display: inline-block;
+}
+
+.button:hover {
+  filter: brightness(1.1);
+}
+
+.button:active {
+  filter: brightness(0.9);
+}
+
+.button.outline {
+  background: transparent;
+  border: 2px solid #473fd3;
+  color: #473fd3;
+  box-shadow: none;
+}
+
+.button.outline:hover {
+  background-color: #473fd3;
+  color: white;
+}
+
+.button.outline:active {
+  background-color: #4d42cc;
+  border-color: #4d42cc;
+}
+
+.input,
+.calendar {
+  width: 100%;
+  padding: 10px 16px;
+  border: 1.5px solid #c7cbd1;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #161e2e;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+/* tutaj tryb ciemny ale trzeba chyba bedzie switcha do tego dorobic*/
+@media (prefers-color-scheme: dark) {
+  .card {
+    background-color: #1f2937;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  }
+  .card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.85);
+  }
+  .input,
+  .calendar {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: #f9fafb;
+  }
+  .input::placeholder,
+  .calendar::placeholder {
+    color: #6b7280;
+  }
+  .input:focus,
+  .calendar:focus {
+    border-color: #818cf8;
+    box-shadow: 0 0 8px rgba(129, 140, 248, 0.8);
+  }
+  .button {
+    box-shadow: 0 4px 10px rgba(124, 58, 237, 0.4);
+  }
+  .button.outline {
+    color: #c6b9fa;
+    border-color: ##c6b9fa;
+  }
+  .button.outline:hover {
+    background-color: #773bdd;
+    color: white;
+  }
+  .button.outline:active {
+    background-color: #6d28d9;
+    border-color: #6d28d9;
+  }
+}
